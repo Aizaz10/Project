@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AA FOOD DELIVERY SERVICES</title>
+    <link  rel="stylesheet"  media="screen and (max-width: 1100px)"  href="phone.css" />
+    <style>
+       * {
+        margin: 5px;
+        padding: 0px;
+      }
+      
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* navigation bar */
+      #navbar {
+        height: 90px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        position: fixed;
+      }
+
+      #navbar::before {
+        content: "";
+        background-color: black;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        opacity: 0.5;
+        z-index: -1;
+      }
+
+      /* navbar logo and image  */
+      #logo {
+        margin: 10px 10px;
+        padding: 20px;
+      }
+
+      #logo img {
+        height: 85px;
+        margin: 3px 6px;
+        border-radius: 70px;
+      }
+
+      /* navbar list styling  */
+      #navbar ul {
+        display: flex;
+      }
+
+      #navbar ul li {
+        list-style: none;
+        font-size: 1.3rem;
+      }
+
+      #navbar ul li a {
+        display: block;
+        padding: 3px 11px;
+        border-radius: 20px;
+        text-decoration: none;
+        color: rgb(235, 244, 244);
+        font-family: "Times New Roman", Times, serif;
+        font-size: 20px;
+      }
+
+      #navbar ul li a:hover {
+        color: black;
+        background-color: rgb(229, 224, 224);
+        display: block;
+        padding: 3px 11px;
+        border-radius: 20px;
+        text-decoration: none;
+      }
+
+      /* home section */
+      #home {
+        display: flex;
+        flex-direction: column;
+        padding: 4.9rem;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #home ::before {
+        content: "";
+        position: absolute;
+        background-color: rgb(220, 203, 180);
+        height: 500px;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        z-index: -1;
+        opacity: 0.89;
+      }
+
+      #home h1 {
+        color: rgb(29, 16, 75);
+        text-align: center;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+
+      #home p {
+        color: rgb(19, 61, 78);
+        text-align: center;
+        font-size: 1.5rem;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+          border: 2px double gray;
+      }
+
+      /* services section  */
+      #service {
+        margin: 34px;
+        display: flex;
+      }
+
+      #service .box {
+        border: 2px solid red;
+        padding: 34px;
+        margin: 3px 30px;
+        margin-bottom: 20px;
+        border-radius: 30px;
+        background-color: rgb(189, 201, 201);
+      }
+
+      #service .box img {
+        height: 160px;
+        display: block;
+        margin: auto;
+      }
+
+      #service .box p {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      #service h1 {
+        text-align: center;
+        align-items: center;
+      }
+
+      .services-container {
+        background-color: rgb(220, 203, 180);
+      }
+
+      /* client section  */
+      #clients {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .client-item {
+        margin: 5px 5px;
+        padding: 20px;
+      }
+
+      #client-section {
+        height: 344px;
+      }
+
+      #client-section::before {
+        content: "";
+        position: absolute;
+        background-color: rgb(220, 203, 180);
+        width: 100%;
+        height: 54%;
+        z-index: -1;
+        opacity: 0.4;
+      }
+
+      /* CONTACT SECTION  */
+      #contact {
+        position: relative;
+        padding: 40px 0px;
+      }
+
+      #contact::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        opacity: 0.7;
+        background-color: rgb(220, 203, 180);
+      }
+
+      #contact-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 35px;
+      }
+
+      #contact-box input,
+      #contact-box textarea {
+        width: 100%;
+        padding: 0.5rem;
+        border-radius: 20px;
+        font-size: 1.2rem;
+        border-color: black;
+      }
+
+      #contact-box form {
+        width: 40%;
+      }
+
+      #contact-box label {
+        font-size: 1.3rem;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      }
+
+      footer {
+        background: black;
+        color: white;
+        padding: 9px 20px;
+      }
+      #but {
+        border: 2px solid black;
+        color: aliceblue;
+        background-color: rgb(7 39 55);
+        margin: 50px 600px;
+        padding: 15px;
+        font-size: 1.4rem;
+        border-radius: 20%;
+        cursor: pointer;
+      }
+
+      /* utility classes  */
+      .h-primary {
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+        font-size: 2.8rem;
+        padding: 3px;
+      }
+
+      .h-secondary {
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+        font-size: 2rem;
+        padding: 3px;
+      }
+
+      .btn {
+        padding: 6px 20px;
+        border: 2px solid black;
+        color: aliceblue;
+        background-color: rgb(25, 69, 156);
+        margin: 17px;
+        font-size: 1.4rem;
+        border-radius: 15px;
+        cursor: pointer;
+      }
+
+      #order:hover{
+        padding: 6px 20px;
+        border: 2px solid maroon;
+        color: black;
+        background-color: rgb(25, 69, 156);
+        margin: 17px;
+        font-size: 1.4rem;
+        border-radius: 15px;
+        cursor: pointer;
+        width: 190px;
+        height: 2.7rem;
+      }
+
+      .center {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <nav id="navbar">
+      <div id="logo">
+        <img src="logo.jpg" alt="error loading image" />
+      </div>
+
+      <ul>
+        <li class="items"><a href="#home">HOME</a></li>
+        <li class="items"><a href="#services">SERVICES</a></li>
+        <li class="items"><a href="#client-section">OUR CLIENTS</a></li>
+        <li class="items"><a href="#contact">CONTACT US</a></li>
+      </ul>
+    </nav>
+    <section id="home">
+      <h1 class="h-primary">WELCOME TO AA MEAL</h1>
+      <p>FLAT 15% DISCOUNT</p>
+      <button class="btn" id="order">ORDER NOW</button>
+    </section>
+    <section class="services-container" id="services">
+        <h1 class="h-primary center">OUR SERVICES</h1>
+        <div id="service">
+        <div class="box">
+          <img src="delivery.jpg" alt="" />
+          <h1 class="h-secondary center">FOOD DELIVERY</h1>
+          <p>Order delicious homemade food from local chefs in Karachi. Order one meal or subscribe to weekly meal delivery at your office or home.</p>
+        </div>
+        <div class="box">
+          <img src="caterers.jpg" alt="" />
+          <h1 class="h-secondary center">FOOD CATERING</h1>
+          <p>BARAT AND VALIMA CATERING PACKAGES ; 700 per Head · Chicken Biryani / Beef Biryani · Chicken Karahi / Beef Qurma ; 800 per Head · Chicken Biryani / Beef Biryani.</p>
+        </div>
+        <div class="box">
+          <img src="pizza.jpg" alt="" />
+          <h1 class="h-secondary center">PICK-UP SERVICE</h1>
+          <p>If that special someone you're crushing on happens to be a foodie, charm them with these hilarious punny food pickup lines.</p>
+        </div>
+      </div>
+    </section>
+    <section id="client-section">
+      <h1 class="h-primary center">OUR CLIENTS</h1>
+      <div id="clients">
+        <div class="client-item">
+          <img height="130px" width="130px" src="nike logo.jpg" alt="" />
+        </div>
+        <div class="client-item">
+          <img height="110px" width="110px" src="apple logo.jpg" alt="" />
+        </div>
+        <div class="client-item">
+          <img height="110px" width="110px" src="google logo.jpg" alt="" />
+        </div>
+        <div class="client-item">
+          <img height="110px" width="110px" src="mcdonalds logo.jpg" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h1 class="h-primary center">CONTACT US</h1>
+      <div id="contact-box">
+        <form action="">
+          <div id="form-group">
+            <label for="name">NAME</label>
+            <input type="text" name="name" id="name" placeholder="ENTER YOUR NAME">
+          </div>
+          <div id="form-group">
+            <label for="name">EMAIL</label>
+            <input  type="email"  name="name"  id="email"  placeholder="ENTER YOUR EMAIL"
+            />
+          </div>
+          <div id="form-group">
+            <label for="name">PHONE NUMBER</label>
+            <input type="number"  name="name" id="phone" placeholder="ENTER YOUR PHONE NUMBER" />
+          </div>
+          <div id="form-group">
+            <label for="message">MESSAGE</label>
+            <textarea  name="message"  id="message"  cols="30"  rows="10" ></textarea>
+          </div>
+          <button type="reset" id="but">reset</button>
+        </form>
+      </div>
+    </section>
+    <footer>
+      <div class="center">COPYRIGHT &copy; AA MEAL All Rights Are Reserved</div>
+    </footer>
+  </body>
+</html>
